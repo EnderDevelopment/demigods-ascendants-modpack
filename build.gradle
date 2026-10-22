@@ -1,0 +1,30 @@
+plugins {
+    id 'net.neoforged.gradle.userdev' version '6.0.125'
+}
+
+group = project.group
+version = project.mod_version
+archivesBaseName = project.archives_base_name
+
+ext.neoGradle {
+    minecraft {
+        version = project.minecraft_version
+        mappings = 'official'
+        run {
+            version = project.minecraft_version
+            data {
+                client = 'latest'
+                server = 'latest'
+            }
+        }
+    }
+    properties {
+        mod_license = 'All Rights Reserved'
+    }
+}
+
+dependencies {
+    minecraft 'net.neoforged:neoforge:${project.loader_version}-${project.minecraft_version}'
+    minecraft 'net.minecraft:client:${project.minecraft_version}-sources'
+    minecraft 'net.minecraft:server:${project.minecraft_version}-sources'
+}

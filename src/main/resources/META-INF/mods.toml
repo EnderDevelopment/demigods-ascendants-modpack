@@ -1,0 +1,21 @@
+[mods]
+modId = "example-mod"
+displayName = "Example Mod"
+version = "${file.jarVersion}"
+credits = ""
+authors = ""
+description = ""
+
+[[dependencies.example-mod]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${project.loader_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.example-mod]]
+modId = "minecraft"
+type = "required"
+versionRange = "[${project.minecraft_version},)"
+ordering = "NONE"
+side = "BOTH"
